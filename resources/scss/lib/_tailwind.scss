@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @variants responsive {
+        .w-14v {
+            width: 14vw;
+        }
+        .w-15vw {
+            width: 15vww;
+        }
+        .w-16v {
+            width: 16vw;
+        }
+        .w-17v {
+            width: 17vw;
+        }
+        .w-18v {
+            width: 18vw;
+        }
+        .w-19v {
+            width: 19vw;
+        }
+        .w-20v {
+            width: 20vw;
+        }
+        .rounded-lf-xl {
+            // border-top-right-radius: 20px;
+            // border-bottom-right-radius: 20px;
+        }
+
+        .abs-bot {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .xh-15v {
+            height: 9vh;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+@import "../utils/breakpoints";
+.btn__theme {
+    background: var(--accent-color);
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    padding: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    border-radius: 100%;
+    @include breakpoint("extra-small") {
+        top: 5px;
+        right: 5px;
+        width: 2rem;
+        height: 2rem;
+    }
+}
+.sun,
+.moon {
+    width: calc(100% - 0.5rem);
+    height: calc(100% - 0.5rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out;
+}
+
+.sun {
+    fill: #d4b607;
+}
+
+.moon {
+    fill: #f3f3f3;
+}
+.toggle-label {
+    cursor: pointer;
+}
+
+#theme-toggle {
+    visibility: hidden;
+    position: absolute;
+}
+#theme-toggle:not(:checked) + .toggle-label .sun {
+    // display: none;
+    top: 50%;
+    opacity: 1;
+}
+
+#theme-toggle:checked + .toggle-label .sun {
+    // display: none;
+    top: 20%;
+    opacity: 0;
+}
+
+#theme-toggle:not(:checked) + .toggle-label .moon {
+    top: 70%;
+    opacity: 0;
+}
+
+#theme-toggle:checked + .toggle-label .moon {
+    top: 50%;
+    opacity: 1;
+}
+
+.toggle-out {
+    top: -10%;
+    opacity: 0;
+}
+
+.toggle-in {
+    top: 50%;
+    opacity: 1;
+}
+
+// @keyframes toggleIn {
+//     from {
+//         opacity: 1;
+//         top: 50%;
+//     }
+//     to {
+//         opacity: 0;
+//         top: -10%;
+//     }
+// }
+
+// #theme-toggle + label {
+//     display: block;
+//     cursor: pointer;
+//     border-radius: 50%;
+//     height: 5rem;
+//     width: 5rem;
+//     transition: all 0.3s ease-in-out;
+// }
+
+// #theme-toggle:not(:checked) + label {
+//     background-color: var(--text-on-pri-sec);
+// }
+
+// #theme-toggle:checked + label {
+//     background-color: var(--secondary-color);
+//     box-shadow: inset -18px -16px 1px 1px #fff;
+// }

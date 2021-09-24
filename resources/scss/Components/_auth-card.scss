@@ -1,0 +1,12 @@
+.auth__card {
+    &__inside {
+        background: var(--accent-color);
+        color: var(--text-on-pri-sec);
+    }
+    input {
+        color: var(--accent-color);
+    }
+    button {
+        color: var(--text-on-pri-sec);
+    }
+}

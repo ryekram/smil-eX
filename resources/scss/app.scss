@@ -1,0 +1,14 @@
+@use 'utils';
+@use 'lib';
+@use 'Components';
+@use "Pages";
+
+.active {
+    background: var(--text-on-pri-sec);
+    color: var(--accent-color);
+    fill: var(--accent-color) !important;
+}
+
+.dropped {
+    display: flex !important;
+}
